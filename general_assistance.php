@@ -65,14 +65,58 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
+    <ol class="breadcrumb">
+        <li>Assistance</li>
+        <li class="active">General assistance</li>
+    </ol>
+    <h1>General assistance</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active" id="accounts-and-services-pill"><a
+                        href="#accounts-and-services-tab">Accounts and services</a></li>
+                <li role="presentation" id="payments-and-costs-pill"><a href="#payments-and-costs-tab">Payments and
+                        costs</a></li>
+                <li role="presentation" id="smart-life-content-pill"><a href="#smart-life-content-tab">Smart life
+                        content</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="accounts-and-services-tab">
+                    <h2>Accounts and services</h2>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="payments-and-costs-tab">
+                    <h2>Payments and costs</h2>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="smart-life-content-tab">
+                    <h2>Smart Life Content</h2>
+                </div>
+            </div>
+        </div>
 
-    <h1> HELLO </h1>
+    </div>
 </div>
-
 
 <!-- scripts added last for faster loading -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('#accounts-and-services-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#payments-and-costs-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#smart-life-content-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+</script>
 
 </body>
 </html>

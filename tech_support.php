@@ -65,14 +65,64 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
+    <ol class="breadcrumb">
+        <li>Assistance</li>
+        <li class="active">Tech Support</li>
+    </ol>
+    <h1>Tech support</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active" id="smartphone-and-tablet-pill"><a
+                        href="#smartphone-and-tablet-tab">Smartphone and tablet</a></li>
+                <li role="presentation" id="phone-line-pill"><a href="#phone-line-tab">Phone line</a></li>
+                <li role="presentation" id="adsl-and-fiber-pill"><a href="#adsl-and-fiber-tab">ADSL and Fiber</a></li>
+                <li role="presentation" id="tv-pill"><a href="#tv-tab">TV</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="smartphone-and-tablet-tab">
+                    <h2>Smartphone and tablet</h2>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="phone-line-tab">
+                    <h2>Phone line</h2>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="adsl-and-fiber-tab">
+                    <h2>ADSL and Fiber</h2>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tv-tab">
+                    <h2>TV</h2>
+                </div>
+            </div>
+        </div>
 
-    <h1> HELLO </h1>
+    </div>
 </div>
-
 
 <!-- scripts added last for faster loading -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('#smartphone-and-tablet-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#phone-line-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#adsl-and-fiber-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#tv-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+</script>
 
 </body>
 </html>
