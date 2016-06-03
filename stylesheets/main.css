@@ -26,3 +26,6 @@ body {
 .tab-pane h2 {
   margin-top: 0;
 }
+.gray {
+  color: #777;
+}
