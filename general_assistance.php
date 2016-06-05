@@ -48,8 +48,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Smart Life <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">TV & Entretainment</a></li>
-                        <li><a href="#">Health and Wellness</a></li>
+                        <li><a href="/smart-life/TV_Entertainment.php">TV & Entretainment</a></li>
+                        <li><a href="/smart-life/Health_Wellness.php">Health and Wellness</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
