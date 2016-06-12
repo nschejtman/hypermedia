@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "saeed";
+$username = "root";
 $password = "";
 
 // Create connection
@@ -32,5 +32,13 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
+
+
+
+
+require_once 'Data.php';
+
+$d = new Data();
+echo $d->getProduct();
 
 ?>
