@@ -1,0 +1,62 @@
+*, *:after, *:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+$blue: #004990
+
+.side-bar
+  background-color: #e7e7e7
+  border-radius: 4px
+
+.grid
+  width: auto
+
+.grid:after
+  content: ""
+  display: table
+  clear: both
+
+.grid > .cell
+  width: 33.33%
+  padding-right: 20px
+  float: left
+  margin-bottom: 20px
+
+@mixin centered
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+.product
+  background-color: #fafafa
+  border-radius: 4px
+  padding: 20px
+  img
+    width: auto
+    max-height: 160px
+    @include centered
+  span
+    display: block
+    text-align: center
+    &.name
+      margin-top: 10px
+      font-size: 15px
+      color: $blue
+    &.price
+      color: red
+      font-size: 18px
+      margin-bottom: 10px
+  .btn
+    @include centered
+
+.blue
+  color: $blue
+
+.uppercase
+  text-transform: uppercase
+
+.btn-white
+  background-color: white
+  border-color: $blue
+  color: $blue
