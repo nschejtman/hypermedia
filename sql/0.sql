@@ -1,3 +1,4 @@
+# noinspection SqlNoDataSourceInspectionForFile
 -- phpMyAdmin SQL Dump
 -- version 4.5.4.1deb2ubuntu1
 -- http://www.phpmyadmin.net
@@ -42,7 +43,6 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `name`, `category`, `description`, `price`, `brand`) VALUES
 (1, 'ipad pro 9.7', 'tablet', 'ipad pro 9.7 is a concentration ever of portability and performance. It is only 6.1 mm and weights less that 500 grams.', 839.9, 'Apple'),
 (2, 'iPhone 6s 16GB', 'smartphone', 'retina HD display 3D touch 7000 series aluminium and more resistant glass', 789.9, 'Apple');
-
 -- --------------------------------------------------------
 
 --
