@@ -22,7 +22,6 @@
             <a class="navbar-brand" href="/home.php"><img src="/images/tim-logo-1024x768.png" alt="TIM"
                                                           height="25px"></a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -81,28 +80,26 @@
         <div class="col-md-8">
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="TV-tab">
+                <div role="tabpanel" class="tab-pane active grid-tv" id="TV-tab">
                     <h2>TV</h2>
-		    <h3>Unlimited fun</h3>
+                    <h3>Unlimited fun</h3>
                     <hr>
-                    <h3 class="gray">Discover the great cinema, the most exciting series, the most loved cartoon characters, sports 
-and much more on TV, PC, tablet and smartphone</h3>
-                    <a href="/smart-life/TV.php" class="pill">DICOVER</a>
-                  
+                    <h4 class="gray">Discover the great cinema, the most exciting series, the most loved cartoon
+                        characters, sports
+                        and much more on TV, PC, tablet and smartphone</h4>
+                    <a href="/smart-life/TV.php" class="pill">DISCOVER</a>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="music-tab">
+                <div role="tabpanel" class="tab-pane grid-tv" id="music-tab">
                     <h2>Music</h2>
                     <h3>The soundtrack to your life</h3>
                     <hr>
-                    <h3 class="gray">Listen to millions of songs streaming, all new releases, 
-exclusive previews and many playlist of all kinds. On smartphones 
-without consuming GB, PC and tablet. When you want and how much you want.</h3>
-                    <a href="/smart-life/music.php" class="pill">DICOVER</a>
-
+                    <h4 class="gray">Listen to millions of songs streaming, all new releases,
+                        exclusive previews and many playlist of all kinds. On smartphones
+                        without consuming GB, PC and tablet. When you want and how much you want.</h4>
+                    <a href="/smart-life/music.php" class="pill">DISCOVER</a>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

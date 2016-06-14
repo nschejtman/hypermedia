@@ -29,3 +29,76 @@ body {
 .gray {
   color: #777;
 }
+h2 {
+  position: relative;
+  text-align: center;
+  left: 30%;
+  width: 40%;
+}
+.grid-tv > div {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  border-top: 1px solid #e0e0e0;
+}
+.grid-tv ul {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0;
+  font-size: 0;
+}
+.grid-tv ul li {
+  font-size: 1em;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  border-right: 1px solid #e0e0e0;
+}
+.grid-tv ul.grid-two li {
+  width: 49%;
+}
+.grid-tv ul.grid-three li {
+  width: 33%;
+}
+.grid-tv ul li:last-child {
+  border-right: 0;
+}
+.grid-tv img {
+  width: 100%;
+}
+.grid-tv .cont {
+  padding: 50px 25px;
+  text-align: center;
+}
+.grid-tv h1 {
+  color: #004990;
+  font-weight: normal;
+  font-size: 30px;
+  white-space: nowrap;
+  font-family: 'GillSansAltOne', Arial;
+  text-align: center;
+}
+.grid-tv p {
+  font-family: arial;
+  font-size: 14px;
+  color: #004990;
+  text-align: center;
+}
+.grid-tv .pill {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 7px 40px;
+  display: inline-block;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  margin-top: 25px;
+  background: #004990;
+  text-decoration: none;
+  border: 1px solid #004990;
+  font-family: "GillSans-light", Arial;
+}

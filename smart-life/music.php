@@ -8,23 +8,6 @@
     <link rel="stylesheet" href="/stylesheets/main.min.css">
 </head>
 <body>
-
-<style> 
-h2 { position: relative ;text-align : center;left : 30% ;width: 30%;}
-.grid-tv{  }
-.grid-tv > div{  position: relative ;left : 30% ;width: 40%; border-top: 1px solid #e0e0e0;}
-.grid-tv ul{  margin: 0 auto;  max-width: 980px;  padding: 0;  font-size: 0;}
-.grid-tv ul li{  font-size: 1em;  display: inline-block;    vertical-align: top;    height: 100%;  border-right: 1px solid #e0e0e0;  }
-.grid-tv ul.grid-two  li{  width: 49%;  }
-.grid-tv ul.grid-three li{  width: 33%;  }
-.grid-tv ul li:last-child{  border-right: 0;}
-.grid-tv img{  width: 100%;}
-.grid-tv .cont{  padding: 50px 25px;  text-align: center;}
-.grid-tv h1{  color: #004990;  font-weight: normal;  font-size: 30px;  white-space: nowrap;    font-family: 'GillSansAltOne', Arial;  text-align: center;}
-.grid-tv p{  font-family: arial;  font-size: 14px;  color: #004990;  text-align: center;}
-.grid-tv .pill {    -webkit-border-radius: 15px;    -moz-border-radius: 15px;    -ms-border-radius: 15px;    border-radius: 15px;    letter-spacing: 1px;    text-transform: uppercase;    padding: 7px 40px;    display: inline-block;    text-align: center;    font-size: 13px;    color: #fff;    margin-top: 25px;    background: #004990;    text-decoration: none;    border: 1px solid #004990;    font-family: "GillSans-light", Arial;}
-</style>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -88,33 +71,35 @@ h2 { position: relative ;text-align : center;left : 30% ;width: 30%;}
         <li class="active">Music</li>
     </ol>
     <div class="row">
-    
-    <div>   
-         <section class="grid-tv" style="background-image:url(/images/music.jpg); ">             
-                <div class="cont">                        
-                    <h1>TIMmusic</h1>   
-                    <p>Step into a world of music with the app TIMmusic. Millions of songs streaming, all the latest releases and many playlists to listen anywhere, anytime, without consuming GB!</p>   
-                    
-                </div>      
-           </section>
-    </div>
-     <div width="100%" text-align="center"> 
-    <h2> products</h2>
-    <section class="grid-tv">  
-    <div>    
-        <ul class="grid-one">     
-            <li>        
-                <div class="cont">          
-                    <img src="/images/beats.jpg">     
-                    <h1>Beats headphones</h1>   
-                    <p>Audio enhanced with the new Beats sound quality, the sound of Solo2 headphones is sharper and cleaner and emits a broader range of emotions</p>   
-                    <a href="#" class="pill">See Detailes</a>    
-                </div>      
-            </li>      
-        </ul> 
-    </div>
-    </section>
-    </div>
+
+        <div>
+            <section class="grid-tv" style="background-image:url(/images/music.jpg); ">
+                <div class="cont">
+                    <h1>TIMmusic</h1>
+                    <p>Step into a world of music with the app TIMmusic. Millions of songs streaming, all the latest
+                        releases and many playlists to listen anywhere, anytime, without consuming GB!</p>
+
+                </div>
+            </section>
+        </div>
+        <div width="100%" text-align="center">
+            <h2> products</h2>
+            <section class="grid-tv">
+                <div>
+                    <ul class="grid-one">
+                        <li>
+                            <div class="cont">
+                                <img src="/images/beats.jpg">
+                                <h1>Beats headphones</h1>
+                                <p>Audio enhanced with the new Beats sound quality, the sound of Solo2 headphones is
+                                    sharper and cleaner and emits a broader range of emotions</p>
+                                <a href="#" class="pill">See Detailes</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
 
 
     </div>
