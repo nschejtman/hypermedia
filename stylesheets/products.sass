@@ -8,6 +8,24 @@ $blue: #004990
 .side-bar
   background-color: #e7e7e7
   border-radius: 4px
+  padding: 20px 20px 20px 25px
+  font-size: 16px
+  line-height: 26px
+  color: gray
+  hr
+    border-color: gray
+  h4
+    color: $blue
+  label
+    font-weight: normal
+  input
+    margin-right: 8px
+    margin-left: 12px
+  input:checked + label
+    color: #000
+  input[name=category] + label
+    text-transform: capitalize
+
 
 .grid
   width: auto
@@ -29,7 +47,7 @@ $blue: #004990
   margin-right: auto
 
 .product
-  background-color: #fafafa
+  border: 1px solid #bcbcbc
   border-radius: 4px
   padding: 20px
   img
