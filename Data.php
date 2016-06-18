@@ -28,6 +28,23 @@ class Data
 
         $ct = "select * from Products";
         $result = $this->conn->query($ct);
+        $this->conn->close();
         return $result;
     }
+
+    function getProduct_Detail($id)
+    {
+        //$q = $this->conn->prepare("select * from product_feature where product_id = ?");
+
+        $ctp = "select * from products where id = ".$id.";";
+        $ctd = " select * from product_feature where product_id = ".$id;
+
+        $resultp = $this->conn->query($ctp);
+        $resultd = $this->conn->query($ctd);
+
+        $this->conn->close();
+        return [$resultp, $resultd];
+    }
 }
+
+?>

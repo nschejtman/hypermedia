@@ -1,13 +1,29 @@
+<?php
+    require_once '../Data.php';
+    $d = new Data();
+    $id = intval($_GET['id']);
+    $result = $d->getProduct_Detail($id);
+
+    while($row = $result[0]->fetch_assoc())
+    {
+        $prod = $row;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tim</title>
+    <title>Product</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/product_detail.css">
+
 </head>
 <body>
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,8 +46,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Offers <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/offers/home_offer.php">Home</a></li>
-                        <li><a href="/offers/TV_Entertainment.php">TV & Entertainment</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Mobile</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -64,12 +80,47 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
 <div class="container">
+    <ol class="breadcrumb">
+        <li><a href="../home.php">Home</a></li>
+        <li>Products</li>
+        <?php
+            //echo "<li><a href='../products.php>".$prod["category"]."</a></li>";
+            echo "<li><a href=\"../products.php?category=".$prod["category"]."\">".$prod["category"]."</a></li>";
+        ?>
+        <li class="active">iPhone</li>
+    </ol>
+    <hr>
+    <div width="100%" text-align="center">
+        <div class="pic">
 
-    <h1> HELLO </h1>
+            <?php
+                    echo "<img src=../images/".$prod["id"].".jpg width=400px;>";
+            ?>
+        </div>
+        <div class="pic">
+            <?php
+            echo "<h3 style='color: darkblue'>".$prod["name"]."</h3><hr>";
+            echo "<h3 style='color: red'>".$prod["price"]." €</h3><hr>"
+            ."<a href='#' class='pill'>Price</a><hr>"
+            ."<br><h4 style='color: darkblue'>Technical specifications</h4>";
+
+            echo "<table class=\"table\">";
+            while($row = $result[1]->fetch_assoc())
+            {
+                echo "<tr><td>".$row["property"]."</td><td>".$row["value"]."</td></tr>";
+
+            }
+            echo "</table >";
+            ?>
+
+        </div>
+    </div>
+
+
+
 </div>
-
-
 <!-- scripts added last for faster loading -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

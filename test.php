@@ -35,19 +35,33 @@ $conn->close();
 
 
 
-
+echo "<br><br>";
 require_once 'Data.php';
 
 $d = new Data();
-$result = $d->getProduct();
+$result = $d->getProduct_Detail(20);//$d->getProduct();
 
-if ($result->num_rows > 0) {
+if ($result[0]->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["name"]. "<br>";
+    while($row = $result[0]->fetch_assoc()) {
+        echo $row["name"]. "     " . $row["category"]. "<br> <br>";
     }
 } else {
     echo "0 results";
 }
+
+
+if ($result[1]->num_rows > 0) {
+    // output data of each row
+    while($row = $result[1]->fetch_assoc()) {
+        echo $row["property"]. ": " . $row["value"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+
 
 ?>
