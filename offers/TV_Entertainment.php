@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../stylesheets/tim_smart_fiber.css">
     <link rel="stylesheet" href="../stylesheets/TV_Entertainment.css">
+    <link rel="stylesheet" href="/stylesheets/main.min.css">
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -32,7 +33,7 @@
                        aria-expanded="false">Offers <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/offers/home_offer.php">Home</a></li>
-                        <li><a href="#">Mobile</a></li>
+                        <li><a href="/offers/TV_Entertainment.php">TV & Entertainment</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -65,74 +66,102 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+
 <div class="container">
-    <a href="../home.php">home | </a> TV & Entertainment
+
+    <ol class="breadcrumb">
+        <li><a href="../home.php">home</a></li>
+        <li >Offers</li>
+        <li class="active">TV & Entertainment</li>
+    </ol>
+
     <hr>
-    <div class="tabordion">
-        <section id="section1">
-            <input type="radio" name="sections" id="option1" checked>
-            <label for="option1">Film e TV</label>
-            <article>
-                <h2>Film e TV</h2>
-                <div class="items">
-                    <img src="../images/TIMVision_banner_1.jpg" class="image">
-                    <h3 align="center">TIMvision</h3>
-                    <p align="center">Movies, series and cartoons</p>
-                    <div align="center">
-                        <input type="button" value="Read more" >
-                    </div>
-                </div>
-                <div class="items">
-                    <img src="../images/TIMSky_banner_2.jpg" class="image">
-                    <h3 align="center">TIM Sky</h3>
-                    <p align="center">Calls, Internet & SKY</p>
-                    <div align="center">
-                        <input type="button" value="Read more" >
-                    </div>
-                </div>
 
-            </article>
-        </section>
-        <section id="section2">
-            <input type="radio" name="sections" id="option2">
-            <label for="option2">Sport</label>
-            <article>
-                <h2>Sport</h2>
-                <p>The costs set out below are those of the list and are applied except for any ongoing promotions to customers who require the activation of the offer TIM SMART FIBER by 31/07 /2016.Per details and information , see "Tim recalls".</p>
-                <table class="table">
-                    <tr class="tblHdr">
-                        <td>Cost items</td>
-                        <td>List costs</td>
-                        <td>Valid until 31/07/2016</td>
-                    </tr>
-                    <tr>
-                        <td>Activation fee line home</td>
-                        <td>3.75€ for 24 months</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Activation fee TIM SMART offer FIBER
-                            for New Customers</td>
-                        <td>49€</td>
-                        <td>0€</td>
-                    </tr>
-                </table>
-            </article>
-        </section>
-        <section id="section3">
-            <input type="radio" name="sections" id="option3">
-            <label for="option3">Music</label>
-            <article>
-                <h2>Music</h2>
-                <ul ><p style="color: darkblue">And ' it required to pay by automatic bank transfer or postal debit ( RID ) ?</p>
-                    <li>The RID is not mandatory but is required to get the discount on the contribution of the offer activation TIM SMART FIBER ( for free instead of € 49 for New Plants , passes by another operator , for existing customers with fixed line voice and TIM only for now TIM customers with fixed line with ADSL who switch to Fiber.</li>
-                    <li>If the promise of domiciliation , expired 90 days from the activation request of the offer TIM SMART FIBER , if the RID is not active will be charged the full amount of the contribution of the offer activation TIM SMART FIBER .</li>
-                    <li>The holder is not necessary that the TIM SMART contract is the same as the nominee of the bank RID .</li>
-                </ul>
-            </article>
-        </section>
+    <div class="row">
+        <div class="col-md-4" style="width: 200px">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active" id="film-pill"><a href="#film-tab">Film e TV</a></li>
+                <li role="presentation" id="sport-pill"><a href="#sport-tab">Sport</a></li>
+                <li role="presentation" id="music-pill"><a href="#music-tab">Music</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <!-- Tab panes -->
+            <div class="tab-content" style="width: 120%">
+                <div role="tabpanel" class="tab-pane active grid-tv" id="film-tab">
+                    <h2>Film e TV</h2>
+
+                    <section class="grid-tv" >
+                        <div style="left:5%;width: 90%;">
+                            <ul class="grid-two" >
+                                <li>
+                                    <div class="cont">
+                                        <img src="../images/TIMVision_banner_1.jpg" class="image">
+                                        <h3>TIMvision</h3>
+                                        <p> Movies, series and cartoons </p>
+                                        <a class="pill" href="TIMvision.php">Read more</a>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cont">
+                                        <img src="../images/TIMSky_banner_2.jpg" class="image">
+                                        <h3>TIM Sky</h3>
+                                        <p>20MB internet and unlimited calls</p>
+                                        <p align="center">Calls, Internet & SKY</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+                <div role="tabpanel" class="tab-pane grid-tv" id="sport-tab">
+                    <h2>Sport</h2>
+
+                    <section class="grid-tv" >
+                        <div style="left:5%;width: 90%;" >
+                            <ul class="grid-three">
+                                <li>
+                                    <div class="cont">
+                                        <img src="../images/FantaSerieA_v1.jpg">
+                                        <h4>FantaSerieA</h4>
+                                        <p> It got the app for your fantasy football! Download it and try it now!</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cont">
+                                        <img src="../images/81632_serie_A_230x150_V2_0.jpg">
+                                        <h4>Serie A</h4>
+                                        <p>Live Serie A TIM with the best
+                                            moments of the Championship 2015/2016!</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cont">
+                                        <img src="../images/81498_9399_SerieA_TV_v2.jpg">
+                                        <h4>Serie A TV</h4>
+                                        <p>TV of the Serie A TIM is not just commentary, but a real show</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+                <div role="tabpanel" class="tab-pane grid-tv" id="music-tab">
+                    <h2>Music</h2>
+                    <hr>
+                    <div class="imgMusic" style="left:5%;width: 90%; height: 300px; background-size: cover" >
+                        <h3 style="padding-left: 20px; color: darkblue">TIMmusic</h3>
+                        <h4 style="padding-left: 20px;">All the music you want <br>
+                            without consuming Giga!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
 
 
 </div>
@@ -141,6 +170,20 @@
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+<script type="text/javascript">
+    $('#film-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#sport-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#music-pill a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+</script>
 
 </body>
 </html>
