@@ -6,6 +6,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../stylesheets/home_offer.css">
+    <link rel="stylesheet" href="/stylesheets/main.min.css">
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -65,28 +66,47 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-    <a href="../home.php">home | </a> Offers-home
+    <ol class="breadcrumb">
+        <li><a href="../home.php">home</a></li>
+        <li >Offers</li>
+        <li class="active">home</li>
+    </ol>
     <hr>
-    <h2>Mobile</h2>
-    <div class="items"> <img src="../images/h1.jpg" class="image">
-        <h4 align="center">Tim Smart Fiber</h4>
-        <h5>Ultra fast internet and TIM vision included</h5>
-        <h3 class="price">From 29 €/month</h3>
-        <div align="center">
-            <input type="button" value="Read more" onclick="location.href='../offers/tim_smart_fiber.php';" >
-        </div>
-    </div>
-    <div class="items"> <img src="../images/h2.jpg" class="image">
-        <h4 align="center">Tim Smart Home</h4>
-        <h5>20MB internet and unlimited calls</h5>
-        <h3 class="price">From 19 €/month</h3>
-        <!--<input type="button" value="Read more" onclick="location.href='../offers/tim_smart_fiber.php';" class="button">
-        -->
-    </div>
-    <div class="items"> <img src="../images/h3.jpg" class="image">
-        <h4 align="center">Tim Smart Mobile</h4>
-        <h5>Home, mobile, internet and TIM Vision</h5>
-        <h3 class="price">From 29 €/month</h3>
+    <div>
+        <h2> Mobile</h2>
+        <section class="grid-tv" >
+            <div style="left:15%;width: 70%;">
+                <ul class="grid-three">
+                    <li>
+                        <div class="cont">
+                            <img src="../images/h1.jpg">
+                            <h3>Tim Smart Fiber</h3>
+                            <p> Ultra fast internet and TIM vision included </p>
+                            <h4 class="price">From 29 €/month</h4>
+                            <a href="../offers/tim_smart_fiber.php" class="pill">See Detailes</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cont">
+                            <img src="../images/h2.jpg">
+                            <h3>Tim Smart Home</h3>
+                            <p>20MB internet and unlimited calls</p>
+                            <h4 class="price">From 19 €/month</h4>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="cont">
+                            <img src="../images/h3.jpg">
+                            <h3>Tim Smart Mobile</h3>
+                            <p> Home, mobile, internet and TIM Vision</p>
+                            <h4 class="price">From 29 €/month</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </div>
 </div>
 
