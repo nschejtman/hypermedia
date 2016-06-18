@@ -9,7 +9,25 @@
 
 class Data
 {
+    var $servername = "localhost";
+    var $username = "root";
+    var $password = "";
+    var $dbname = "hypermedia";
+    // Create connection
+    var $conn ;
+
+    public function __construct()
+    {
+        $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+        if ($this->conn->connect_error) {
+            die("Connection failed: " . $this->conn->connect_error);
+        }
+    }
+
     function getProduct(){
-        echo 'test data';
+
+        $ct = "select * from Products";
+        $result = $this->conn->query($ct);
+        return $result;
     }
 }
