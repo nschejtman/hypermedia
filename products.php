@@ -20,6 +20,9 @@ if (!$brands) throw new Exception("Database error");
 /** @noinspection SqlNoDataSourceInspection, SqlResolve */
 $categories = $conn->query("SELECT DISTINCT category FROM products ORDER BY category;");
 
+
+$products = $conn->query("SELECT id,name,category,price  FROM products ORDER BY category;");
+
 $conn->close();
 
 require_once 'Data.php';
@@ -124,43 +127,25 @@ require_once 'Data.php';
                 <div class="cell">
                     <div class="product">
                         <img src="http://bit.ly/1sBBqrS">
-                        <span class="name">iPhone 6 16GB</span>
-                        <span class="price">750$</span>
+                        <span class="name">-----test---</span>
+                        <span class="price">---$</span>
                         <a class="btn btn-white" href="#">Details</a>
                     </div>
                 </div>
-                <div class="cell">
-                    <div class="product">
-                        <img src="http://bit.ly/1sBBqrS">
-                        <span class="name">iPhone 6 16GB</span>
-                        <span class="price">750$</span>
-                        <a class="btn btn-white" href="#">Details</a>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="product">
-                        <img src="http://bit.ly/1sBBqrS">
-                        <span class="name">iPhone 6 16GB</span>
-                        <span class="price">750$</span>
-                        <a class="btn btn-white" href="#">Details</a>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="product">
-                        <img src="http://bit.ly/1sBBqrS">
-                        <span class="name">iPhone 6 16GB</span>
-                        <span class="price">750$</span>
-                        <a class="btn btn-white" href="#">Details</a>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="product">
-                        <img src="http://bit.ly/1sBBqrS">
-                        <span class="name">iPhone 6 16GB</span>
-                        <span class="price">750$</span>
-                        <a class="btn btn-white" href="#">Details</a>
-                    </div>
-                </div>
+
+                <?php
+                while ($row = $products->fetch_assoc()) {
+                    echo '<div class="cell">';
+                    echo '<div class="product"> ';
+                    echo '<img src="/images/products/'.$row["id"].'.jpg"> ';
+                    echo '<span class="name">'. $row["name"].'</span>';
+                    echo '<span class="price">'. $row["price"].'</span>';
+                    echo '<a class="btn btn-white" href="/product.php?pid='.$row["id"].'">Details</a>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+
             </div>
         </div>
     </div>
