@@ -7,7 +7,7 @@ INSERT INTO `products` (`id`, `name`, `category`, `description`, `price`, `brand
 
 INSERT INTO `products` (`id`, `name`, `category`, `description`, `price`, `brand`) VALUES ('24', 'Nokia speakers MD12', 'speaker', 'Listening to your favorite music is now easier.With NFC included Up to 15 hours of music playback', '49.90', 'Nokia');
 
-INSERT INTO `products` (`id`, `name`, `category`, `description`, `price`, `brand`) VALUES ('25', 'Cuffie Beats «Solo2»', 'headphone', 'Audio enhanced with the new Beats sound quality, the sound of Solo2 headphones is sharper and cleaner and emits a broader range of emotions', '199.90', 'beats');	
+INSERT INTO `products` (`id`, `name`, `category`, `description`, `price`, `brand`) VALUES ('25', 'Cuffie Beats Solo2', 'headphone', 'Audio enhanced with the new Beats sound quality, the sound of Solo2 headphones is sharper and cleaner and emits a broader range of emotions', '199.90', 'beats');	
 
 INSERT INTO `products` (`id`, `name`, `category`, `description`, `price`, `brand`) VALUES ('26', 'Samsung Galaxy Gear S', 'sensor', 'An elegant curved Super AMOLED display for optimal fit, customizable screens and interchangeable straps to better express their own style', '349.90', 'Samsung');
 
