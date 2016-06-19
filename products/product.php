@@ -1,43 +1,29 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "hypermedia";
+    require_once '../Data.php';
+    $d = new Data();
+    $id = intval($_GET['pid']);
+    $result = $d->getProduct_Detail($id);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    while($row = $result[0]->fetch_assoc())
+    {
+        $prod = $row;
+    }
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-/** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$brands = $conn->query("SELECT DISTINCT brand FROM products ORDER BY brand;");
-
-if (!$brands) throw new Exception("Database error");
-
-/** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$categories = $conn->query("SELECT DISTINCT category FROM products ORDER BY category;");
-
-
-$products = $conn->query("SELECT id,name,category,price  FROM products ORDER BY category;");
-
-$conn->close();
-
-require_once 'Data.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tim</title>
+    <title>Product</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/main.min.css">
-    <link rel="stylesheet" href="/stylesheets/products.min.css">
+    <link rel="stylesheet" href="/stylesheets/product_detail.css">
+
 </head>
 <body>
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -94,71 +80,52 @@ require_once 'Data.php';
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
 <div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <h3 class="blue">Filters</h3>
-            <div class="side-bar">
-                <h4>Brand</h4>
-                <?php
-                while ($row = $brands->fetch_assoc()) {
-                    echo "<input type='checkbox' name='brand' value='". $row["brand"]."' '><label>" . $row["brand"] . "</label><br>";
-                }
-                ?>
-                <hr>
-                <h4>Category</h4>
-                <?php
-                while ($row = $categories->fetch_assoc()) {
-                    echo "<input type='checkbox' name='category' value='". $row["category"]."' '><label>" . $row["category"] . "</label><br>";
-                }
-                ?>
-                <hr>
-                <h4>Price</h4>
-                <input type="radio" name="price" value="over500"><label> > 500 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 500 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 300 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 100 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 50 € </label><br>
-            </div>
+    <ol class="breadcrumb">
+        <li><a href="../home.php">Home</a></li>
+        <li>Products</li>
+        <?php
+            //echo "<li><a href='../products.php>".$prod["category"]."</a></li>";
+            echo "<li><a href=\"/products.php?category=".$prod["root_Category"]."\">".$prod["root_Category"]."</a></li>";
+            echo "<li class=\"active\">".$prod["name"]."</li>"
+        ?>
+
+    </ol>
+    <hr>
+    <div width="100%" text-align="center">
+        <div class="pic">
+
+            <?php
+                    echo "<img src=/images/products/".$prod["id"].".jpg width=400px;>";
+            ?>
         </div>
-        <div class="col-md-8">
-            <h3 class="blue">Results</h3>
-            <div class="grid">
-                <div class="cell">
-                    <div class="product">
-                        <img src="http://bit.ly/1sBBqrS">
-                        <span class="name">-----test---</span>
-                        <span class="price">---$</span>
-                        <a class="btn btn-white" href="#">Details</a>
-                    </div>
-                </div>
+        <div class="pic">
+            <?php
+            echo "<h3 style='color: darkblue'>".$prod["name"]."</h3><hr>";
+            echo "<h3 style='color: red'>".$prod["price"]." €</h3><hr>"
+            ."<a href='#' class='pill'>Price</a><hr>"
+                ."<h5>".$prod["description"]."</h5><hr>"
+            ."<br><h4 style='color: darkblue'>Technical specifications</h4>";
 
-                <?php
-                while ($row = $products->fetch_assoc()) {
-                    echo '<div class="cell">';
-                    echo '<div class="product"> ';
-                    echo '<img src="/images/products/'.$row["id"].'.jpg"> ';
-                    echo '<span class="name">'. $row["name"].'</span>';
-                    echo '<span class="price">'. $row["price"].'</span>';
-                    echo '<a class="btn btn-white" href="/products/product.php?pid='.$row["id"].'">Details</a>';
-                    echo '</div>';
-                    echo '</div>';
-                }
-                ?>
+            echo "<table class=\"table\">";
+            while($row = $result[1]->fetch_assoc())
+            {
+                echo "<tr><td>".$row["property"]."</td><td>".$row["value"]."</td></tr>";
 
-            </div>
+            }
+            echo "</table >";
+            ?>
+
         </div>
     </div>
+
+
+
 </div>
 <!-- scripts added last for faster loading -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
-    function colorChecked(){
-
-    }
-
-</script>
 
 </body>
 </html>
