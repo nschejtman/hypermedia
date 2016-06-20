@@ -1,4 +1,4 @@
-alter table products add COLUMN (root_Category varchar(100))
+alter table products add COLUMN (root_Category varchar(100));
 
 update products set root_Category = CASE when category = 'smartphone' then category
 	when category = 'tablet' then category
