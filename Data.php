@@ -27,17 +27,18 @@ class Data
     function getProduct($categories, $root_category, $brands, $price){
 
         $ct = "select * from Products where root_Category = '".$root_category."'";
-        if ($categories != '')
+        if (strlen($categories) > 1)
             $ct .=" and category in (".$categories.")";
-        if ($brands != '')
+        if (strlen($brands) > 1)
             $ct .=" and brand in (".$brands.")";
-        if ($price != '')
+        if (strlen($price) > 1)
             $ct .=" and price ".$price;
 
-        
+
         $result = $this->conn->query($ct);
         $this->conn->close();
         return $result;
+
     }
 
     function getProduct_Detail($id)
