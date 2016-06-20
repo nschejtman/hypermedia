@@ -124,15 +124,6 @@ require_once 'Data.php';
         <div class="col-md-8">
             <h3 class="blue">Results</h3>
             <div class="grid">
-                <div class="cell">
-                    <div class="product">
-                        <img src="http://bit.ly/1sBBqrS">
-                        <span class="name">-----test---</span>
-                        <span class="price">---$</span>
-                        <a class="btn btn-white" href="#">Details</a>
-                    </div>
-                </div>
-
                 <?php
                 while ($row = $products->fetch_assoc()) {
                     echo '<div class="cell">';
