@@ -38,10 +38,10 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Smartphone</a></li>
-                        <li><a href="#">Tablet</a></li>
-                        <li><a href="#">Modem</a></li>
-                        <li><a href="#">Smart Living</a></li>
+                        <li><a href="/products.php?category=smartphone">Smartphone</a></li>
+                        <li><a href="/products.php?category=tablet">Tablet</a></li>
+                        <li><a href="/products.php?category=modem">Modem</a></li>
+                        <li><a href="/products.php?category=smart-living">Smart Living</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
