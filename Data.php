@@ -24,9 +24,17 @@ class Data
         }
     }
 
-    function getProduct(){
+    function getProduct($categories, $root_category, $brands, $price){
 
-        $ct = "select * from Products";
+        $ct = "select * from Products where root_Category = '".$root_category."'";
+        if ($categories != '')
+            $ct .=" and category in (".$categories.")";
+        if ($brands != '')
+            $ct .=" and brand in (".$brands.")";
+        if ($price != '')
+            $ct .=" and price ".$price;
+
+        
         $result = $this->conn->query($ct);
         $this->conn->close();
         return $result;
