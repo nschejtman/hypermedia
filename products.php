@@ -11,17 +11,19 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$category = $_GET['category'];
 
 /** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$brands = $conn->query("SELECT DISTINCT brand FROM products ORDER BY brand;");
+$brands = $conn->query("SELECT DISTINCT brand FROM products WHERE root_Category='".$category."' ORDER BY brand;");
 
 if (!$brands) throw new Exception("Database error");
 
 /** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$categories = $conn->query("SELECT DISTINCT category FROM products ORDER BY category;");
+$categories = $conn->query("SELECT DISTINCT category FROM products WHERE root_Category='".$category."' ORDER BY category;");
+$crc = mysqli_num_rows($categories);
 
 
-$products = $conn->query("SELECT id,name,category,price  FROM products ORDER BY category;");
+$products = $conn->query("SELECT id,name,category,price  FROM products WHERE root_Category='".$category."' ORDER BY category;");
 
 $conn->close();
 
@@ -36,6 +38,7 @@ require_once 'Data.php';
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/main.min.css">
     <link rel="stylesheet" href="/stylesheets/products.min.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -101,29 +104,34 @@ require_once 'Data.php';
             <div class="side-bar">
                 <h4>Brand</h4>
                 <?php
+
                 while ($row = $brands->fetch_assoc()) {
-                    echo "<input type='checkbox' name='brand' value='". $row["brand"]."' '><label>" . $row["brand"] . "</label><br>";
+                    echo "<input type='checkbox' name='brand' value='". $row["brand"]."'  onchange='showProduct()'><label>" . $row["brand"] . "</label><br>";
                 }
                 ?>
                 <hr>
                 <h4>Category</h4>
                 <?php
+                $disable = "";
+                if ($crc == 1)
+                   $disable = " disabled='disabled' ";
                 while ($row = $categories->fetch_assoc()) {
-                    echo "<input type='checkbox' name='category' value='". $row["category"]."' '><label>" . $row["category"] . "</label><br>";
+                    echo "<input type='checkbox' name='category' value='". $row["category"]."'  checked='checked'  onchange='showProduct()'  ".$disable."><label>" . $row["category"] . "</label><br>";
                 }
                 ?>
                 <hr>
                 <h4>Price</h4>
-                <input type="radio" name="price" value="over500"><label> > 500 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 500 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 300 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 100 € </label><br>
-                <input type="radio" name="price" value="over500"><label> < 50 € </label><br>
+                
+                <input type="radio" name="price" value="> 500"  onchange='showProduct()'><label> > 500 € </label><br>
+                <input type="radio" name="price" value="< 500"  onchange='showProduct()'><label> < 500 € </label><br>
+                <input type="radio" name="price" value="< 300"  onchange='showProduct()'><label> < 300 € </label><br>
+                <input type="radio" name="price" value="< 100"  onchange='showProduct()'><label> < 100 € </label><br>
+                <input type="radio" name="price" value="< 50"  onchange='showProduct()'><label> < 50 € </label><br>
             </div>
         </div>
         <div class="col-md-8">
             <h3 class="blue">Results</h3>
-            <div class="grid">
+            <div class="grid" id="display_info">
                 <?php
                 while ($row = $products->fetch_assoc()) {
                     echo '<div class="cell">';
