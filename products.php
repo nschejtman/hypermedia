@@ -132,7 +132,7 @@ require_once 'Data.php';
                     echo '<img src="/images/products/'.$row["id"].'.jpg"> ';
                     echo '</div>';
                     echo '<span class="name">'. $row["name"].'</span>';
-                    echo '<span class="price">'. $row["price"].'</span>';
+                    echo '<span class="price">'. $row["price"].' €</span>';
                     echo '<a class="btn btn-white" href="/products/product.php?pid='.$row["id"].'">Details</a>';
                     echo '</div>';
                     echo '</div>';

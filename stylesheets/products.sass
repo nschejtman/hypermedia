@@ -47,10 +47,9 @@ $blue: #004990
 
 .product
   border: 1px solid #bcbcbc
-  position: relative
   border-radius: 4px
   padding: 20px
-  height: 320px !important
+  height: 320px
   .product-image
     height: 160px
   img
@@ -81,3 +80,25 @@ $blue: #004990
   background-color: white
   border-color: $blue
   color: $blue
+
+
+@media screen and (max-width: 380px)
+  .grid > .cell
+    width: 50%
+    padding-right: 20px
+    float: left
+    margin-bottom: 20px
+
+  .product
+    padding: 10px
+    height: 260px
+    .product-image
+      height: 120px
+      img
+        max-height: 120px
+    span.name
+      font-size: 12px
+    span.price
+      font-size: 14px
+
+
