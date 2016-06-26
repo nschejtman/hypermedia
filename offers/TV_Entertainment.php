@@ -40,18 +40,18 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Smartphone</a></li>
-                        <li><a href="#">Tablet</a></li>
-                        <li><a href="#">Modem</a></li>
-                        <li><a href="#">Smart Living</a></li>
+                        <li><a href="/products.php?category=smartphone">Smartphone</a></li>
+                        <li><a href="/products.php?category=tablet">Tablet</a></li>
+                        <li><a href="/products.php?category=modem">Modem</a></li>
+                        <li><a href="/products.php?category=smart-living">Smart Living</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Smart Life <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">TV & Entretainment</a></li>
-                        <li><a href="#">Health and Wellness</a></li>
+                        <li><a href="/smart-life/TV_Entertainment.php">TV & Entretainment</a></li>
+                        <li><a href="/smart-life/Health_Wellness.php">Health and Wellness</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -66,13 +66,10 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
-
 <div class="container">
-
     <ol class="breadcrumb">
-        <li><a href="../home.php">home</a></li>
-        <li >Offers</li>
+        <li><a href="../home.php">Home</a></li>
+        <li>Offers</li>
         <li class="active">TV & Entertainment</li>
     </ol>
 
@@ -81,7 +78,7 @@
     <div class="row">
         <div class="col-md-4" style="width: 200px">
             <ul class="nav nav-pills nav-stacked">
-                <li role="presentation" class="active" id="film-pill"><a href="#film-tab">Film e TV</a></li>
+                <li role="presentation" class="active" id="film-pill"><a href="#film-tab">Film and TV</a></li>
                 <li role="presentation" id="sport-pill"><a href="#sport-tab">Sport</a></li>
                 <li role="presentation" id="music-pill"><a href="#music-tab">Music</a></li>
             </ul>
@@ -90,16 +87,16 @@
             <!-- Tab panes -->
             <div class="tab-content" style="width: 120%">
                 <div role="tabpanel" class="tab-pane active grid-tv" id="film-tab">
-                    <h2>Film e TV</h2>
+                    <h2>Film and TV</h2>
 
-                    <section class="grid-tv" >
+                    <section class="grid-tv">
                         <div style="left:5%;width: 90%;">
-                            <ul class="grid-two" >
+                            <ul class="grid-two">
                                 <li>
                                     <div class="cont">
                                         <img src="../images/TIMVision_banner_1.jpg" class="image">
                                         <h3>TIMvision</h3>
-                                        <p> Movies, series and cartoons </p>
+                                        <p> Movies, series and cartoons on-demand</p>
                                         <a class="pill" href="TIMvision.php">Read more</a>
 
                                     </div>
@@ -120,8 +117,8 @@
                 <div role="tabpanel" class="tab-pane grid-tv" id="sport-tab">
                     <h2>Sport</h2>
 
-                    <section class="grid-tv" >
-                        <div style="left:5%;width: 90%;" >
+                    <section class="grid-tv">
+                        <div style="left:5%;width: 90%;">
                             <ul class="grid-three">
                                 <li>
                                     <div class="cont">
@@ -153,7 +150,7 @@
                 <div role="tabpanel" class="tab-pane grid-tv" id="music-tab">
                     <h2>Music</h2>
                     <hr>
-                    <div class="imgMusic" style="left:5%;width: 90%; height: 300px; background-size: cover" >
+                    <div class="imgMusic" style="left:5%;width: 90%; height: 300px; background-size: cover">
                         <h3 style="padding-left: 20px; color: darkblue">TIMmusic</h3>
                         <h4 style="padding-left: 20px;">All the music you want <br>
                             without consuming Giga!</h4>

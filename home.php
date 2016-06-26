@@ -81,7 +81,7 @@
                 <p>TIM Smart Fiber is the complete offer for unlimited, ultrafast browsing. Now with TIM vision
                     included,
                     allowing you to watch your favorite TV shows and movies on demand.</p>
-                <a class="pill">Details</a>
+                <a class="pill" href="/offers/tim_smart_fiber.php">Details</a>
                 <br>
                 <br>
             </div>
@@ -95,7 +95,7 @@
                     with no time constraints , even in HD on TV with dedicated decoder ,
                     Smart TV , PC , Smartphone and Tablet.
                 </p>
-                <a class="pill">Details</a>
+                <a class="pill" href="/offers/TIMvision.php">Details</a>
                 <br>
                 <br>
             </div>
@@ -109,7 +109,7 @@
                     demand
                     series, movies, music and games, smart life products and services, the combinations are endless!
                 </p>
-                <a class="pill">Find a plan</a>
+                <a class="pill" href="/offers/home_offer.php">Find a plan</a>
                 <br>
                 <br>
             </div>
