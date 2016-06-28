@@ -39,18 +39,18 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Smartphone</a></li>
-                        <li><a href="#">Tablet</a></li>
-                        <li><a href="#">Modem</a></li>
-                        <li><a href="#">Smart Living</a></li>
+                        <li><a href="/products.php?category=smartphone">Smartphone</a></li>
+                        <li><a href="/products.php?category=tablet">Tablet</a></li>
+                        <li><a href="/products.php?category=modem">Modem</a></li>
+                        <li><a href="/products.php?category=smart-living">Smart Living</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Smart Life <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">TV & Entretainment</a></li>
-                        <li><a href="#">Health and Wellness</a></li>
+                        <li><a href="/smart-life/TV_Entertainment.php">TV & Entretainment</a></li>
+                        <li><a href="/smart-life/Health_Wellness.php">Health and Wellness</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -67,9 +67,9 @@
 </nav>
 <div class="container">
     <ol class="breadcrumb">
-        <li><a href="../home.php">home</a></li>
-        <li >Offers</li>
-        <li class="active">Home + Mobile</li>
+        <li><a href="../home.php">Home</a></li>
+        <li>Offers</li>
+        <li class="active">Home offers</li>
     </ol>
     <hr>
     <div>

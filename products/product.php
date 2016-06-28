@@ -1,13 +1,12 @@
 <?php
-    require_once '../Data.php';
-    $d = new Data();
-    $id = intval($_GET['pid']);
-    $result = $d->getProduct_Detail($id);
+require_once '../Data.php';
+$d = new Data();
+$id = intval($_GET['pid']);
+$result = $d->getProduct_Detail($id);
 
-    while($row = $result[0]->fetch_assoc())
-    {
-        $prod = $row;
-    }
+while ($row = $result[0]->fetch_assoc()) {
+    $prod = $row;
+}
 
 ?>
 
@@ -23,7 +22,6 @@
 
 </head>
 <body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,18 +44,18 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Offers <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Mobile</a></li>
+                        <li><a href="/offers/home_offer.php">Home</a></li>
+                        <li><a href="/offers/TV_Entertainment.php">TV & Entertainment</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Smartphone</a></li>
-                        <li><a href="#">Tablet</a></li>
-                        <li><a href="#">Modem</a></li>
-                        <li><a href="#">Smart Living</a></li>
+                        <li><a href="/products.php?category=smartphone">Smartphone</a></li>
+                        <li><a href="/products.php?category=tablet">Tablet</a></li>
+                        <li><a href="/products.php?category=modem">Modem</a></li>
+                        <li><a href="/products.php?category=smart-living">Smart Living</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -80,15 +78,14 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
 <div class="container">
     <ol class="breadcrumb">
         <li><a href="../home.php">Home</a></li>
         <li>Products</li>
         <?php
-            //echo "<li><a href='../products.php>".$prod["category"]."</a></li>";
-            echo "<li><a href=\"/products.php?category=".$prod["root_Category"]."\">".$prod["root_Category"]."</a></li>";
-            echo "<li class=\"active\">".$prod["name"]."</li>"
+        //echo "<li><a href='../products.php>".$prod["category"]."</a></li>";
+        echo "<li><a href=\"/products.php?category=" . $prod["root_Category"] . "\">" . $prod["root_Category"] . "</a></li>";
+        echo "<li class=\"active\">" . $prod["name"] . "</li>"
         ?>
 
     </ol>
@@ -97,21 +94,20 @@
         <div class="pic">
 
             <?php
-                    echo "<img src=/images/products/".$prod["id"].".jpg width=400px;>";
+            echo "<img src=/images/products/" . $prod["id"] . ".jpg width=400px;>";
             ?>
         </div>
         <div class="pic">
             <?php
-            echo "<h3 style='color: darkblue'>".$prod["name"]."</h3><hr>";
-            echo "<h3 style='color: red'>".$prod["price"]." €</h3><hr>"
-            ."<a href='#' class='pill'>Price</a><hr>"
-                ."<h5>".$prod["description"]."</h5><hr>"
-            ."<br><h4 style='color: darkblue'>Technical specifications</h4>";
+            echo "<h3 style='color: darkblue'>" . $prod["name"] . "</h3><hr>";
+            echo "<h3 style='color: red'>" . $prod["price"] . " €</h3><hr>"
+                . "<a href='#' class='pill'>Price</a><hr>"
+                . "<h5>" . $prod["description"] . "</h5><hr>"
+                . "<br><h4 style='color: darkblue'>Technical specifications</h4>";
 
             echo "<table class=\"table\">";
-            while($row = $result[1]->fetch_assoc())
-            {
-                echo "<tr><td>".$row["property"]."</td><td>".$row["value"]."</td></tr>";
+            while ($row = $result[1]->fetch_assoc()) {
+                echo "<tr><td>" . $row["property"] . "</td><td>" . $row["value"] . "</td></tr>";
 
             }
             echo "</table >";
@@ -119,7 +115,6 @@
 
         </div>
     </div>
-
 
 
 </div>

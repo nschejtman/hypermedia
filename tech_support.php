@@ -30,24 +30,24 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Offers <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Mobile</a></li>
+                        <li><a href="/offers/home_offer.php">Home</a></li>
+                        <li><a href="/offers/TV_Entertainment.php">TV & Entertainment</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Smartphone</a></li>
-                        <li><a href="#">Tablet</a></li>
-                        <li><a href="#">Modem</a></li>
-                        <li><a href="#">Smart Living</a></li>
+                        <li><a href="/products.php?category=smartphone">Smartphone</a></li>
+                        <li><a href="/products.php?category=tablet">Tablet</a></li>
+                        <li><a href="/products.php?category=modem">Modem</a></li>
+                        <li><a href="/products.php?category=smart-living">Smart Living</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Smart Life <span class="caret"></span></a>
-                   <ul class="dropdown-menu">
+                    <ul class="dropdown-menu">
                         <li><a href="/smart-life/TV_Entertainment.php">TV & Entretainment</a></li>
                         <li><a href="/smart-life/Health_Wellness.php">Health and Wellness</a></li>
                     </ul>

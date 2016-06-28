@@ -14,16 +14,16 @@ if ($conn->connect_error) {
 $category = $_GET['category'];
 
 /** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$brands = $conn->query("SELECT DISTINCT brand FROM products WHERE root_Category='".$category."' ORDER BY brand;");
+$brands = $conn->query("SELECT DISTINCT brand FROM products WHERE root_Category='" . $category . "' ORDER BY brand;");
 
 if (!$brands) throw new Exception("Database error");
 
 /** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$categories = $conn->query("SELECT DISTINCT category FROM products WHERE root_Category='".$category."' ORDER BY category;");
+$categories = $conn->query("SELECT DISTINCT category FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
 $crc = mysqli_num_rows($categories);
 
 
-$products = $conn->query("SELECT id,name,category,price  FROM products WHERE root_Category='".$category."' ORDER BY category;");
+$products = $conn->query("SELECT id,name,category,price  FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
 
 $conn->close();
 
@@ -63,18 +63,18 @@ require_once 'Data.php';
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Offers <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Mobile</a></li>
+                        <li><a href="/offers/home_offer.php">Home</a></li>
+                        <li><a href="/offers/TV_Entertainment.php">TV & Entertainment</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Smartphone</a></li>
-                        <li><a href="#">Tablet</a></li>
-                        <li><a href="#">Modem</a></li>
-                        <li><a href="#">Smart Living</a></li>
+                        <li><a href="/products.php?category=smartphone">Smartphone</a></li>
+                        <li><a href="/products.php?category=tablet">Tablet</a></li>
+                        <li><a href="/products.php?category=modem">Modem</a></li>
+                        <li><a href="/products.php?category=smart-living">Smart Living</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -106,7 +106,7 @@ require_once 'Data.php';
                 <?php
 
                 while ($row = $brands->fetch_assoc()) {
-                    echo "<input type='checkbox' name='brand' value='". $row["brand"]."'  onchange='showProduct()'><label>" . $row["brand"] . "</label><br>";
+                    echo "<input type='checkbox' name='brand' value='" . $row["brand"] . "'  onchange='showProduct()'><label>" . $row["brand"] . "</label><br>";
                 }
                 ?>
                 <hr>
@@ -114,19 +114,19 @@ require_once 'Data.php';
                 <?php
                 $disable = "";
                 if ($crc == 1)
-                   $disable = " disabled='disabled' ";
+                    $disable = " disabled='disabled' ";
                 while ($row = $categories->fetch_assoc()) {
-                    echo "<input type='checkbox' name='category' value='". $row["category"]."'  checked='checked'  onchange='showProduct()'  ".$disable."><label>" . $row["category"] . "</label><br>";
+                    echo "<input type='checkbox' name='category' value='" . $row["category"] . "'  checked='checked'  onchange='showProduct()'  " . $disable . "><label>" . $row["category"] . "</label><br>";
                 }
                 ?>
                 <hr>
                 <h4>Price</h4>
-                
-                <input type="radio" name="price" value="> 500"  onchange='showProduct()'><label> > 500 € </label><br>
-                <input type="radio" name="price" value="< 500"  onchange='showProduct()'><label> < 500 € </label><br>
-                <input type="radio" name="price" value="< 300"  onchange='showProduct()'><label> < 300 € </label><br>
-                <input type="radio" name="price" value="< 100"  onchange='showProduct()'><label> < 100 € </label><br>
-                <input type="radio" name="price" value="< 50"  onchange='showProduct()'><label> < 50 € </label><br>
+
+                <input type="radio" name="price" value="> 500" onchange='showProduct()'><label> > 500 € </label><br>
+                <input type="radio" name="price" value="< 500" onchange='showProduct()'><label> < 500 € </label><br>
+                <input type="radio" name="price" value="< 300" onchange='showProduct()'><label> < 300 € </label><br>
+                <input type="radio" name="price" value="< 100" onchange='showProduct()'><label> < 100 € </label><br>
+                <input type="radio" name="price" value="< 50" onchange='showProduct()'><label> < 50 € </label><br>
             </div>
         </div>
         <div class="col-md-8">
@@ -137,11 +137,11 @@ require_once 'Data.php';
                     echo '<div class="cell">';
                     echo '<div class="product">';
                     echo '<div class="product-image">';
-                    echo '<img src="/images/products/'.$row["id"].'.jpg"> ';
+                    echo '<img src="/images/products/' . $row["id"] . '.jpg"> ';
                     echo '</div>';
-                    echo '<span class="name">'. $row["name"].'</span>';
-                    echo '<span class="price">'. $row["price"].' €</span>';
-                    echo '<a class="btn btn-white" href="/products/product.php?pid='.$row["id"].'">Details</a>';
+                    echo '<span class="name">' . $row["name"] . '</span>';
+                    echo '<span class="price">' . $row["price"] . ' €</span>';
+                    echo '<a class="btn btn-white" href="/products/product.php?pid=' . $row["id"] . '">Details</a>';
                     echo '</div>';
                     echo '</div>';
                 }
@@ -155,7 +155,7 @@ require_once 'Data.php';
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script>
-    function colorChecked(){
+    function colorChecked() {
 
     }
 

@@ -1,5 +1,3 @@
-$(document).ready(ready);
-
 function showProduct(str) {
     var cat = location.search.split('category=')[1];
 

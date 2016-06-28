@@ -41,18 +41,18 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Products <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Smartphone</a></li>
-                        <li><a href="#">Tablet</a></li>
-                        <li><a href="#">Modem</a></li>
-                        <li><a href="#">Smart Living</a></li>
+                        <li><a href="/products.php?category=smartphone">Smartphone</a></li>
+                        <li><a href="/products.php?category=tablet">Tablet</a></li>
+                        <li><a href="/products.php?category=modem">Modem</a></li>
+                        <li><a href="/products.php?category=smart-living">Smart Living</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Smart Life <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">TV & Entretainment</a></li>
-                        <li><a href="#">Health and Wellness</a></li>
+                        <li><a href="/smart-life/TV_Entertainment.php">TV & Entretainment</a></li>
+                        <li><a href="/smart-life/Health_Wellness.php">Health and Wellness</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -71,7 +71,7 @@
 
     <ol class="breadcrumb">
         <li><a href="../home.php">home</a></li>
-        <li >Offers</li>
+        <li>Offers</li>
         <li><a href="TV_Entertainment.php">TV & Entertainment</a></li>
         <li class="active">TIMvision</li>
     </ol>
@@ -80,9 +80,9 @@
     <div class="imageContainer">
         <h2>TIMvision</h2>
         <br>Cartoons , movies , TV series, documentaries and concerts always on demand
-            <br>to create your own schedule without advertising . More than 8,000 titles on a subscription ,
-            <br> with no time constraints , even in HD on TV with dedicated decoder ,<br>
-            Smart TV , PC , Smartphone and Tablet.</p>
+        <br>to create your own schedule without advertising . More than 8,000 titles on a subscription ,
+        <br> with no time constraints , even in HD on TV with dedicated decoder ,<br>
+        Smart TV , PC , Smartphone and Tablet.</p>
     </div>
     <hr>
 
@@ -94,18 +94,18 @@
                 <li role="presentation" id="offer-pill"><a href="#offer-tab">Offer</a></li>
             </ul>
         </div>
-        <div class="col-md-8" >
+        <div class="col-md-8">
             <!-- Tab panes -->
             <div class="tab-content" style="width: 120%; ">
-                <div role="tabpanel" class="tab-pane active grid-tv " id="movie-tab" >
+                <div role="tabpanel" class="tab-pane active grid-tv " id="movie-tab">
                     <h2>Movie</h2>
                     <hr>
                     <div class="imgMovie" style="left:5%;width: 90%;">
                         <h3>Watch movies at home</h3>
                         <h5>A varied selection of films with the most anticipated premieres ,
-                        <br>the great classics , unreleased , action films , thrillers , comedies and animation
-                        <br> for the whole family . In addition to HD ,
-                        <br>to make every spectacular image and not miss a single detail
+                            <br>the great classics , unreleased , action films , thrillers , comedies and animation
+                            <br> for the whole family . In addition to HD ,
+                            <br>to make every spectacular image and not miss a single detail
                         </h5>
                     </div>
                 </div>
@@ -115,9 +115,9 @@
                     <div class="imgMusic" style="left:5%;width: 90%;">
                         <h3>Concerts of best artists</h3>
                         <h5>More than 50 concerts and live events of the best
-                        <br>Italian and international artists
-                        <br>to be accompanied by the best music , anywhere, anytime
-                            </h5>
+                            <br>Italian and international artists
+                            <br>to be accompanied by the best music , anywhere, anytime
+                        </h5>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane grid-tv" id="offer-tab">
@@ -126,8 +126,8 @@
                     <div class="imgTV" style="left:5%;width: 90%;">
                         <h3>Offers</h3>
                         <h5>Learn the benefits of TIMvision and take advantage of
-                        <br>promotions
-                            </h5>
+                            <br>promotions
+                        </h5>
                     </div>
                 </div>
             </div>
