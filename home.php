@@ -128,17 +128,21 @@
 </div>
 <div id="help-banner">
     <div class="container">
-        <h3>Need assitance?</h3>
+        <h1 class="blue text-center">Need assitance?</h1>
+
         <div class="row">
             <div class="col-md-4">
                 <h5>Call line 187</h5>
-                <img src="/images/call.png" width="50px" class="center-block">
+                <a href="tel:+39155"><img src="/images/call.png" width="70px" class="center-block"></a>
             </div>
             <div class="col-md-4">
                 <h5>General assistance</h5>
+                <a href="/general_assistance.php"><img src="/images/gral_assitance.png" width="70px"
+                                                       class="center-block"></a>
             </div>
             <div class="col-md-4">
                 <h5>Tech support</h5>
+                <a href="/tech_support.php"><img src="/images/tech_support.png" width="70px" class="center-block"></a>
             </div>
         </div>
         <br>
@@ -146,9 +150,21 @@
     </div>
 </div>
 <div id="products-banner">
-    
+    <div class="container">
+        <h1 class="blue text-center">Introducing Samsung S7-S7 Edge</h1>
+        <br>
+        <img src="images/s7_home.png">
+    </div>
 </div>
-
+<footer>
+    <div class="container">
+        <p>
+            <a href="https://www.tim.it/assistenza/i-consumatori/info-consumatori-mobile/web-privacy-policy">Privacy</a> |
+            <a href="https://www.tim.it/note-legali">Legal note</a>
+            <span class="pull-right">Telecom Italia 2012 - P.IVA 00488410010</span>
+        </p>
+    </div>
+</footer>
 <!-- scripts added last for faster loading -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
