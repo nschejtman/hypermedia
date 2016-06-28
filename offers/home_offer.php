@@ -69,7 +69,7 @@
     <ol class="breadcrumb">
         <li><a href="../home.php">Home</a></li>
         <li>Offers</li>
-        <li class="active">Home offers</li>
+        <li class="active">Home + Mobile</li>
     </ol>
     <hr>
     <div>
