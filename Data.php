@@ -26,7 +26,7 @@ class Data
 
     function getProduct($categories, $root_category, $brands, $price){
 
-        $ct = "select * from Products where root_Category = '".$root_category."'";
+        $ct = "select * from products where root_Category = '".$root_category."'";
         if (strlen($categories) > 1)
             $ct .=" and category in (".$categories.")";
         if (strlen($brands) > 1)
@@ -48,29 +48,29 @@ class Data
         $ctp = "select * from products where id = ".$id.";";
         $ctd = " select * from product_feature where product_id = ".$id;
 
-        $resultp = $this->conn->query($ctp);
-        $resultd = $this->conn->query($ctd);
+        $res["tp"] = $this->conn->query($ctp);
+        $res["td"] = $this->conn->query($ctd);
 
         $this->conn->close();
-        return [$resultp, $resultd];
+        return $res;
     }
 
     function getFilters($category)
     {
-        $brands = $this->conn->query("SELECT DISTINCT brand FROM products WHERE root_Category='" . $category . "' ORDER BY brand;");
+        $res["brands"] = $this->conn->query("SELECT DISTINCT brand FROM products WHERE root_Category='" . $category . "' ORDER BY brand;");
 
-        if (!$brands) throw new Exception("Database error");
+        if (!$res["brands"]) throw new Exception("Database error");
 
         /** @noinspection SqlNoDataSourceInspection, SqlResolve */
-        $categories = $this->conn->query("SELECT DISTINCT category FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
-        $crc = mysqli_num_rows($categories);
+        $res["categories"] = $this->conn->query("SELECT DISTINCT category FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
+        $res["crc"] = mysqli_num_rows($res["categories"]);
 
 
-        $products = $this->conn->query("SELECT id,name,category,price  FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
+        $res["products"] = $this->conn->query("SELECT id,name,category,price  FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
 
         $this->conn->close();
 
-        return [$brands, $categories, $crc, $products];
+        return $res;
     }
 }
 

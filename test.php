@@ -1,10 +1,11 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "polimihyper";
 $password = "";
+$dbname = "my_polimihyper";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
@@ -30,35 +31,23 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+#$conn->close();
+
+
+ $servername = "localhost";
+ $username = "polimihyper";
+ $password = "";
+ $dbname = "my_polimihyper";
+$conn = new mysqli($servername, $username, $password, $dbname);
+$ct = "select * from products ";
+$result = $conn->query($ct);
 $conn->close();
-
-
-
-
-echo "<br><br>";
-require_once 'Data.php';
-
-$d = new Data();
-$result = $d->getProduct_Detail(20);//$d->getProduct();
-
-if ($result[0]->num_rows > 0) {
-    // output data of each row
-    while($row = $result[0]->fetch_assoc()) {
-        echo $row["name"]. "     " . $row["category"]. "<br> <br>";
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "name: " . $row[1];
     }
-} else {
-    echo "0 results";
-}
-
-
-if ($result[1]->num_rows > 0) {
-    // output data of each row
-    while($row = $result[1]->fetch_assoc()) {
-        echo $row["property"]. ": " . $row["value"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
+}else {
+echo "0 results";}
 
 
 
