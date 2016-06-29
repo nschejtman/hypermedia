@@ -70,9 +70,9 @@
 <div class="container">
 
     <ol class="breadcrumb">
-        <li><a href="../home.php">home</a></li>
+        <li><a href="/home.php">home</a></li>
         <li>Offers</li>
-        <li><a href="TV_Entertainment.php">TV & Entertainment</a></li>
+        <li><a href="/offers/TV_Entertainment.php">TV & Entertainment</a></li>
         <li class="active">TIMvision</li>
     </ol>
     <hr>

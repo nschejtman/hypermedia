@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php header('Access-Control-Allow-Origin: *'); ?>
     <meta charset="UTF-8">
     <title>Tim</title>
     <!-- Latest compiled and minified CSS -->
@@ -30,7 +31,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Offers <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/offers/home_offer.php">Home + Mobile</a></li>
+                        <li><a href="/offers/home_offer.php">Home</a></li>
                         <li><a href="/offers/TV_Entertainment.php">TV & Entertainment</a></li>
                     </ul>
                 </li>

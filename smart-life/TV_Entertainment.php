@@ -66,6 +66,7 @@
 </nav>
 <div class="container">
     <ol class="breadcrumb">
+        <li><a href="/home.php">Home</a></li>
         <li>Smart Life</li>
         <li class="active">TV & Entertainment</li>
     </ol>

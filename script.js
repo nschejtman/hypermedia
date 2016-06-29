@@ -1,8 +1,8 @@
 function showProduct(str) {
-    var cat = location.search.split('category=')[1];
-
+    //location.search.split('category=')[1];
+    var cat = str;
     brands = document.getElementsByName('brand');
-    bf='';
+    bf = '';
     for (i = 0; i < brands.length; i++) {
         if (brands[i].checked) {
             bf = bf + ",'" + brands[i].value + "'";
@@ -11,7 +11,7 @@ function showProduct(str) {
     bf = bf.slice(1);
 
     categories = document.getElementsByName('category');
-    cf='';
+    cf = '';
     for (i = 0; i < categories.length; i++) {
         if (categories[i].checked) {
             cf = cf + ",'" + categories[i].value + "'";
@@ -20,10 +20,10 @@ function showProduct(str) {
     cf = cf.slice(1);
 
     price = document.getElementsByName('price');
-    pf='';
+    pf = '';
     for (i = 0; i < price.length; i++) {
         if (price[i].checked) {
-            pf = price[i].value ;
+            pf = price[i].value;
             break;
         }
     }
@@ -33,7 +33,10 @@ function showProduct(str) {
         document.getElementById("display_info").innerHTML = "";
         return;
     } else {
-        
+
+        var location = window.location.hostname;
+        var port = window.location.port;
+
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
@@ -41,14 +44,14 @@ function showProduct(str) {
             // code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange = function() {
+        xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 document.getElementById("display_info").innerHTML = xmlhttp.responseText;
             }
         };
 
-        xmlhttp.open("POST","ProductsLayer.php",true);
+        xmlhttp.open("POST", 'ProductsLayer.php', true);
         xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xmlhttp.send("root_Category="+cat+" & category="+cf+" & brands="+bf+" & price="+pf);
+        xmlhttp.send("root_Category=" + cat + " & category=" + cf + " & brands=" + bf + " & price=" + pf);
     }
 }

@@ -1,33 +1,15 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "hypermedia";
+    $category = $_GET['category'];
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    require_once 'Data.php';
+    $d = new Data();
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$category = $_GET['category'];
+    $result = $d->getFilters($category);
 
-/** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$brands = $conn->query("SELECT DISTINCT brand FROM products WHERE root_Category='" . $category . "' ORDER BY brand;");
-
-if (!$brands) throw new Exception("Database error");
-
-/** @noinspection SqlNoDataSourceInspection, SqlResolve */
-$categories = $conn->query("SELECT DISTINCT category FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
-$crc = mysqli_num_rows($categories);
-
-
-$products = $conn->query("SELECT id,name,category,price  FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
-
-$conn->close();
-
-require_once 'Data.php';
+    $brands = $result[0];
+    $categories = $result[1];
+    $crc = $result[2];
+    $products = $result[3];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,11 +84,12 @@ require_once 'Data.php';
         <div class="col-md-4">
             <h3 class="blue">Filters</h3>
             <div class="side-bar">
+
                 <h4>Brand</h4>
                 <?php
-
+                    $cgr = $_GET["category"];
                 while ($row = $brands->fetch_assoc()) {
-                    echo "<input type='checkbox' name='brand' value='" . $row["brand"] . "'  onchange='showProduct()'><label>" . $row["brand"] . "</label><br>";
+                    echo "<input type='checkbox' name='brand' value='" . $row["brand"] . "'  onchange='showProduct(\"".$cgr."\") '><label>" . $row["brand"] . "</label><br>";
                 }
                 ?>
                 <hr>
@@ -115,18 +98,21 @@ require_once 'Data.php';
                 $disable = "";
                 if ($crc == 1)
                     $disable = " disabled='disabled' ";
+                $cgr = $_GET["category"];
                 while ($row = $categories->fetch_assoc()) {
-                    echo "<input type='checkbox' name='category' value='" . $row["category"] . "'  checked='checked'  onchange='showProduct()'  " . $disable . "><label>" . $row["category"] . "</label><br>";
+                    echo "<input type='checkbox' name='category' value='" . $row["category"] . "'  checked='checked'  onchange='showProduct(\"".$cgr."\")'  " . $disable . "><label>" . $row["category"] . "</label><br>";
                 }
                 ?>
                 <hr>
                 <h4>Price</h4>
-
-                <input type="radio" name="price" value="> 500" onchange='showProduct()'><label> > 500 € </label><br>
-                <input type="radio" name="price" value="< 500" onchange='showProduct()'><label> < 500 € </label><br>
-                <input type="radio" name="price" value="< 300" onchange='showProduct()'><label> < 300 € </label><br>
-                <input type="radio" name="price" value="< 100" onchange='showProduct()'><label> < 100 € </label><br>
-                <input type="radio" name="price" value="< 50" onchange='showProduct()'><label> < 50 € </label><br>
+                <?php
+                $cgr = $_GET["category"];
+                echo "<input type='radio' name='price' value='> 500' onchange='showProduct(\"".$cgr."\")'><label> > 500 € </label><br>".
+                "<input type='radio' name='price' value='< 500' onchange='showProduct(\"".$cgr."\")'><label> < 500 € </label><br>".
+                "<input type='radio' name='price' value='< 300' onchange='showProduct(\"".$cgr."\")'><label> < 300 € </label><br>".
+                "<input type='radio' name='price' value='< 100' onchange='showProduct(\"".$cgr."\")'><label> < 100 € </label><br>".
+                "<input type='radio' name='price' value='< 50' onchange='showProduct(\"".$cgr."\")'><label> < 50 € </label><br>";
+                ?>
             </div>
         </div>
         <div class="col-md-8">

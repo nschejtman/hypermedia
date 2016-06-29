@@ -67,9 +67,9 @@
 </nav>
 <div class="container">
     <ol class="breadcrumb">
-        <li><a href="../home.php">home</a></li>
+        <li><a href="/home.php">home</a></li>
         <li>Offers</li>
-        <li><a href="home_offer.php">Home + Mobile</a></li>
+        <li><a href="/offers/home_offer.php">Home + Mobile</a></li>
         <li class="active">Tim Smart Fiber</li>
     </ol>
 

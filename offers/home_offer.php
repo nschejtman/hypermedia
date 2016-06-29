@@ -67,7 +67,7 @@
 </nav>
 <div class="container">
     <ol class="breadcrumb">
-        <li><a href="../home.php">Home</a></li>
+        <li><a href="/home.php">Home</a></li>
         <li>Offers</li>
         <li class="active">Home + Mobile</li>
     </ol>
@@ -83,7 +83,7 @@
                             <h3>Tim Smart Fiber</h3>
                             <p> Ultra fast internet and TIM vision included </p>
                             <h4 class="price">From 29 €/month</h4>
-                            <a href="../offers/tim_smart_fiber.php" class="pill">See Detailes</a>
+                            <a href="/offers/tim_smart_fiber.php" class="pill">See Detailes</a>
                         </div>
                     </li>
                     <li>

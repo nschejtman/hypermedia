@@ -54,6 +54,24 @@ class Data
         $this->conn->close();
         return [$resultp, $resultd];
     }
+
+    function getFilters($category)
+    {
+        $brands = $this->conn->query("SELECT DISTINCT brand FROM products WHERE root_Category='" . $category . "' ORDER BY brand;");
+
+        if (!$brands) throw new Exception("Database error");
+
+        /** @noinspection SqlNoDataSourceInspection, SqlResolve */
+        $categories = $this->conn->query("SELECT DISTINCT category FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
+        $crc = mysqli_num_rows($categories);
+
+
+        $products = $this->conn->query("SELECT id,name,category,price  FROM products WHERE root_Category='" . $category . "' ORDER BY category;");
+
+        $this->conn->close();
+
+        return [$brands, $categories, $crc, $products];
+    }
 }
 
 ?>

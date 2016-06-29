@@ -13,6 +13,7 @@ while ($row = $result[0]->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php header('Access-Control-Allow-Origin: *'); ?>
     <meta charset="UTF-8">
     <title>Product</title>
     <!-- Latest compiled and minified CSS -->

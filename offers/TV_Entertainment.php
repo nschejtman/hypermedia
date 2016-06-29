@@ -68,7 +68,7 @@
 </nav>
 <div class="container">
     <ol class="breadcrumb">
-        <li><a href="../home.php">Home</a></li>
+        <li><a href="/home.php">Home</a></li>
         <li>Offers</li>
         <li class="active">TV & Entertainment</li>
     </ol>
@@ -97,7 +97,7 @@
                                         <img src="../images/TIMVision_banner_1.jpg" class="image">
                                         <h3>TIMvision</h3>
                                         <p> Movies, series and cartoons on-demand</p>
-                                        <a class="pill" href="TIMvision.php">Read more</a>
+                                        <a class="pill" href="/offers/TIMvision.php">Read more</a>
 
                                     </div>
                                 </li>
