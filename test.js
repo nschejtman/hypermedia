@@ -6,7 +6,8 @@ function render(url){
 var xhr = new XMLHttpRequest();
 var location=window.location.hostname;
 	var port = window.location.port;
-xhr.open('GET', 'http://'+location+':'+port+url, true);
+//xhr.open('GET', 'http://'+location+':'+port+url, true);
+	xhr.open('GET', 'http://polimihyper.altervista.org'+url, true);
 xhr.onload = function(){
 	var html = xhr.response;
  	html = evilstringChopper(html, '<script src="/bower_components/jquery/dist/jquery.min.js"></script>');
