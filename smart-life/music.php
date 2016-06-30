@@ -39,7 +39,7 @@
                                 <h1>Beats headphones</h1>
                                 <p>Audio enhanced with the new Beats sound quality, the sound of Solo2 headphones is
                                     sharper and cleaner and emits a broader range of emotions</p>
-                                <a href="#" class="pill">See Detailes</a>
+                                <a href="/products/product.php?pid=25" class="pill">See Detailes</a>
                             </div>
                         </li>
                     </ul>

@@ -39,7 +39,7 @@
                                 <h3>Samsung Galaxy Gear S </h3>
                                 <p>An elegant curved Super AMOLED display for optimal fit, customizable screens and
                                     interchangeable straps to better express their own style</p>
-                                <a href="#" class="pill">See Detailes</a>
+                                <a href="/products/product.php?pid=26" class="pill">See Detailes</a>
                             </div>
                         </li>
                         <li>
@@ -49,7 +49,7 @@
                                 <p> Used with a mobile application for sports or with a compatible Polar training
                                     computer, the sensor displays in an extremely precise real-time heart rate during
                                     training </p>
-                                <a href="#" class="pill">See Details</a>
+                                <a href="/products/product.php?pid=28" class="pill">See Details</a>
                             </div>
                         </li>
                     </ul>
