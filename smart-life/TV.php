@@ -41,7 +41,7 @@
                                 <h3>Samsung Smart TV</h3>
                                 <p>Select SMART TV best suited to your lifestyle. Enjoy the best entertainment with a
                                     next-generation TV.</p>
-                                <a href="#" class="pill">See Detailes</a>
+                                <a href="/products/product.php?pid=21" class="pill">See Detailes</a>
                             </div>
                         </li>
                         <li>
@@ -50,7 +50,7 @@
                                 <h3>Decoder TIMvision</h3>
                                 <p> Choose from movies, series, cartoons and documentaries, always on demand, to create
                                     your TV programming without commercial breaks. </p>
-                                <a href="#" class="pill">See Details</a>
+                                <a href="/products/product.php?pid=23" class="pill">See Details</a>
                             </div>
                         </li>
                     </ul>
