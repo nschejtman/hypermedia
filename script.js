@@ -50,7 +50,7 @@ function showProduct(str) {
             }
         };
 
-        xmlhttp.open("POST", 'ProductsLayer.php', true);
+        xmlhttp.open("POST", 'http://polimihyper.altervista.org/ProductsLayer.php', true);
         xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xmlhttp.send("root_Category=" + cat + " & category=" + cf + " & brands=" + bf + " & price=" + pf);
     }
