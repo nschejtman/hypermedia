@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php header('Access-Control-Allow-Origin: *'); ?>
     <meta charset="UTF-8">
     <title>Offers-home</title>
     <!-- Latest compiled and minified CSS -->

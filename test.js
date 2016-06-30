@@ -4,8 +4,8 @@ render('/home.php');
 
 function render(url){
 var xhr = new XMLHttpRequest();
-var location='polimihyper.altervista.org';//window.location.hostname;
-	var port ='';// window.location.port;
+var location=window.location.hostname;
+	var port = window.location.port;
 xhr.open('GET', 'http://'+location+':'+port+url, true);
 xhr.onload = function(){
 	var html = xhr.response;
