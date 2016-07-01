@@ -1,0 +1,25 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.items{
+    height: 300px;
+    width: 200px;
+    display: inline-block;
+    margin: 2%;
+    border-color: black;
+    border: solid;
+    border-width: thin;
+}.image{
+    width: 200px;
+    height: 100px;
+    align: center;
+ }
+.price{
+    color: red;
+    align-content: center;
+    text-align: center;
+}.button{
+
+ }
+

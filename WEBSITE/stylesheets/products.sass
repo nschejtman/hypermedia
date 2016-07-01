@@ -1,0 +1,104 @@
+*, *:after, *:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+$blue: #004990
+
+.side-bar
+  background-color: #e7e7e7
+  border-radius: 4px
+  padding: 20px 20px 20px 25px
+  font-size: 16px
+  line-height: 26px
+  color: gray
+  hr
+    border-color: gray
+  h4
+    color: $blue
+  label
+    font-weight: normal
+  input
+    margin-right: 8px
+    margin-left: 12px
+  input:checked + label
+    color: #000
+  input[name=category] + label
+    text-transform: capitalize
+
+.grid
+  width: auto
+
+.grid:after
+  content: ""
+  display: table
+  clear: both
+
+.grid > .cell
+  width: 33.33%
+  padding-right: 20px
+  float: left
+  margin-bottom: 20px
+
+@mixin centered
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+.product
+  border: 1px solid #bcbcbc
+  border-radius: 4px
+  padding: 20px
+  height: 320px
+  .product-image
+    height: 160px
+  img
+    max-width: 100%
+    max-height: 160px
+    @include centered
+  span
+    display: block
+    text-align: center
+    &.name
+      margin-top: 10px
+      font-size: 15px
+      color: $blue
+    &.price
+      color: red
+      font-size: 18px
+      margin-bottom: 10px
+  .btn
+    @include centered
+
+.blue
+  color: $blue
+
+.uppercase
+  text-transform: uppercase
+
+.btn-white
+  background-color: white
+  border-color: $blue
+  color: $blue
+
+
+@media screen and (max-width: 380px)
+  .grid > .cell
+    width: 50%
+    padding-right: 20px
+    float: left
+    margin-bottom: 20px
+
+  .product
+    padding: 10px
+    height: 260px
+    .product-image
+      height: 120px
+      img
+        max-height: 120px
+    span.name
+      font-size: 12px
+    span.price
+      font-size: 14px
+
+

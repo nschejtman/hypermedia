@@ -1,0 +1,17 @@
+{
+  "name": "hypermedia",
+  "homepage": "https://github.com/nschejtman/hypermedia",
+  "authors": [
+    "Nicolas Schejtman <nschejtman93@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
